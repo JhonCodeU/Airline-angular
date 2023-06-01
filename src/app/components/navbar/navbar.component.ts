@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faGlobe, faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  faGlobe = faGlobe;
+  faBars = faBars;
+
+  constructor() { }
 }

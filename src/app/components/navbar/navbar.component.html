@@ -5,11 +5,15 @@
     </a>
   </div>
   <nav>
-    <ul>
+    <fa-icon class="icon bar" [icon]="faBars"></fa-icon>
+    <ul class="services">
       <li><a routerLink="/check-in" routerLinkActive="active">Check-in</a></li>
       <li><a routerLink="/manage" routerLinkActive="active">Manage my booking</a></li>
       <li><a routerLink="/information" routerLinkActive="active">Information</a></li>
     </ul>
   </nav>
-  <a class="lang" href="#">English</a>
+  <div class="lang">
+    <fa-icon class="icon" [icon]="faGlobe"></fa-icon>
+    <a href="#">English</a>
+  </div>
 </header>

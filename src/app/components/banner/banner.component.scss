@@ -1,5 +1,3 @@
-/* Here section of the code is used to style the banner component */
-
 .banner {
   background-image: url("../../../assets/images/banner.jpg");
   width: 100%;
@@ -37,6 +35,29 @@
         background-color: #fff;
         color: #c20114;
         transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  // Media queries para hacerlo responsive
+  @media (max-width: 768px) {
+    .banner-content {
+      width: 100%;
+      padding: 80px 20px;
+
+      h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      a {
+        padding: 8px 20px;
       }
     }
   }

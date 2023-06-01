@@ -11,6 +11,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { OfferComponent } from './components/offer/offer.component';
 import { CardComponent } from './components/card/card.component';
 import { CardLargeComponent } from './components/card-large/card-large.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CardLargeComponent } from './components/card-large/card-large.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

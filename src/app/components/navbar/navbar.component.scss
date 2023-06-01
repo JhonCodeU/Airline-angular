@@ -20,6 +20,11 @@ header {
 
   nav {
     margin-left: 50px;
+
+    .bar {
+      display: none;
+    }
+
     ul {
       list-style: none;
 
@@ -42,12 +47,58 @@ header {
   }
 
   .lang {
-    margin-left: auto; /* Empuja la etiqueta <a> hacia la derecha */
+    margin-left: auto;
     cursor: pointer;
     padding: 8px 15px;
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen {
+    @media (max-width: 768px) {
+      padding: 0 0;
+      justify-content: space-between;
+      margin: 8px 0;
+
+      .logo a img {
+        width: 110px;
+      }
+
+      nav {
+        margin-left: 0px;
+        margin-top: 0;
+        order: 1; // Nuevo orden para el media query
+
+        .bar {
+          display: block;
+          margin-right: auto;
+          cursor: pointer;
+          padding: 8px 15px;
+        }
+
+        .services {
+          display: none;
+        }
+      }
+
+      .logo {
+        order: 2; // Nuevo orden para el media query
+      }
+
+      .lang {
+        margin-left: 0;
+        order: 3; // Nuevo orden para el media query
+
+        a {
+          display: none;
+        }
+      }
     }
   }
 }
