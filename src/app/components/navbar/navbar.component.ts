@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { faGlobe, faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavigationEnd, Router } from '@angular/router';
+import { faGlobe, faBars, faX } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -8,9 +9,23 @@ import { faGlobe, faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  currentRoute = '';
 
   faGlobe = faGlobe;
   faBars = faBars;
+  faX = faX;
+  showServices = false;
 
-  constructor() { }
+  // Get current route
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+      }
+    });
+  }
+
+  toggleServices() {
+    this.showServices = !this.showServices;
+  }
 }

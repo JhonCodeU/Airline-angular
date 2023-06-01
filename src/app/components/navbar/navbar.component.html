@@ -5,12 +5,36 @@
     </a>
   </div>
   <nav>
-    <fa-icon class="icon bar" [icon]="faBars"></fa-icon>
-    <ul class="services">
-      <li><a routerLink="/check-in" routerLinkActive="active">Check-in</a></li>
-      <li><a routerLink="/manage" routerLinkActive="active">Manage my booking</a></li>
-      <li><a routerLink="/information" routerLinkActive="active">Information</a></li>
-    </ul>
+    <fa-icon class="icon bar" [icon]="showServices ? faX : faBars" (click)="toggleServices()"></fa-icon>
+    <ng-container [ngSwitch]="currentRoute">
+      <!-- Menú para la ruta "/" -->
+      <ng-template [ngSwitchCase]="'/'">
+        <ul class="services" [ngClass]="{ 'show': showServices }" routerLinkActive="active">
+          <li><a routerLink="/check-in">Check-in</a></li>
+          <li><a routerLink="/manage">Manage my booking</a></li>
+          <li><a routerLink="/information">Information</a></li>
+        </ul>
+      </ng-template>
+      <!-- Menú para la ruta "/manage" -->
+      <ng-template [ngSwitchCase]="'/manage'">
+        <ul class="services" routerLinkActive="active">
+          <li><a routerLink="/check-in">Check-in</a></li>
+          <li><a routerLink="/manage">Manage my booking</a></li>
+          <li><a routerLink="/information">Information</a></li>
+        </ul>
+      </ng-template>
+      <!-- Menú para la ruta "/information" -->
+      <ng-template [ngSwitchCase]="'/information'">
+        <div class="services">
+          <ul class="services" [ngClass]="{ 'show': showServices }" routerLinkActive="active">
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Fight state</a></li>
+            <li><a href="#">Airplanes</a></li>
+            <li><a href="#">Routes</a></li>
+          </ul>
+        </div>
+      </ng-template>
+    </ng-container>
   </nav>
   <div class="lang">
     <fa-icon class="icon" [icon]="faGlobe"></fa-icon>
