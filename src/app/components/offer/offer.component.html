@@ -1,0 +1,9 @@
+<div class="section-offers">
+  <h2>{{title}}</h2>
+  <div class="site__wrapper">
+    <app-card *ngFor="let card of data" [imageUrl]="card.imageUrl" [name]="card.name" [price]="card.price"
+      [cardClass]="card.cardClass"></app-card>
+
+    <app-card-large></app-card-large>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+// Color Variables
+$indigo: #5c6bc0;
+$blue: #29b6f6;
+$black: #717171;
+
+.grid {
+  float: none;
+  width: 100%;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  padding-bottom: 0.4em;
+
+  @media screen and (min-width: 40.063em) {
+    float: left;
+    width: auto;
+  }
+
+  .size_normal {
+    width: 430px;
+    height: 258px;
+  }
+
+  .size_large {
+    width: 614px;
+    height: 258px;
+  }
+
+  .card__image {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 15px;
+    display: block;
+    min-height: 240px;
+    overflow: hidden;
+    position: relative;
+
+    > img {
+      display: block;
+      margin-bottom: 0;
+
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -ms-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:hover > img {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+
+  .card__title {
+    color: white;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.35em;
+    text-decoration: none;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: rgba(white, 0.7);
+      text-decoration: none;
+    }
+  }
+
+  .card__description {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 0.35em;
+  }
+
+  .card__overlay-content {
+    position: absolute;
+    text-align: end;
+    bottom: 0;
+    right: 0;
+    padding: 1.5em;
+  }
+}

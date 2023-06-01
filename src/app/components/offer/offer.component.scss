@@ -1,0 +1,15 @@
+.section-offers {
+  padding: 36px 0;
+  h2 {
+    padding-left: 192px;
+    font-weight: 700;
+  }
+
+  .site__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 192px;
+    margin-top: 36px;
+  }
+}

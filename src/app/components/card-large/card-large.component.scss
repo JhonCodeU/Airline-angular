@@ -1,0 +1,91 @@
+$primary-color: rgb(29, 24, 35);
+$secondary-color: rgba(83, 127, 231, 1);
+$border-color: #ddd;
+$text-color: #fff;
+$subtitle-color: #c0eef2;
+
+.projcard-container {
+  margin: 30px 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1500px;
+
+  .projcard {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background: $primary-color;
+    background: linear-gradient(
+      90deg,
+      $primary-color 32%,
+      $secondary-color 99%
+    );
+    border: 2px solid $border-color;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+      transform: translate(0px, -3px);
+    }
+
+    &:nth-child(2n) .projcard-img {
+      left: initial;
+      right: 0;
+    }
+    &:hover .projcard-img {
+      transform: scale(1.05) rotate(1deg);
+    }
+  }
+}
+
+.projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .projcard-img {
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease;
+    border-top-right-radius: 20% 12rem;
+    border-bottom-right-radius: 20% 12rem;
+  }
+}
+
+.projcard-textbox {
+  position: absolute;
+  color: $text-color;
+  top: 7%;
+  bottom: 7%;
+  left: 460px;
+  padding-top: 40px;
+  width: calc(100% - 470px);
+
+  .projcard-title {
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .projcard-subtitle {
+    font-weight: 400;
+    font-size: 40px;
+    color: $subtitle-color;
+    margin-bottom: 30px;
+  }
+
+  .projcard-description {
+    width: 600px;
+  }
+}

@@ -32,6 +32,12 @@
       font-weight: 700;
       background-color: #c20114;
       border-radius: 30px;
+
+      &:hover {
+        background-color: #fff;
+        color: #c20114;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }
