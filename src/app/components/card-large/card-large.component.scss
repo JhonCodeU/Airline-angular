@@ -100,16 +100,43 @@ $subtitle-color: #c0eef2;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 472px) {
   // Media query para dispositivos con un ancho máximo de 768px
 
   .projcard-container {
     margin: 0;
     width: 90vw;
 
+    .projcard {
+      height: 90vmax;
+    }
+
     .projcard-innerbox {
       display: flex;
       flex-direction: column;
+
+      .projcard-img {
+        position: initial;
+        clip-path: circle(94% at 40% 0);
+      }
+
+      .projcard-textbox {
+        padding: 0 10px;
+        margin: auto 0;
+        width: 100%;
+
+        .projcard-title {
+          font-size: 34px;
+        }
+
+        .projcard-subtitle {
+          font-size: 34px;
+        }
+
+        .projcard-description {
+          width: 100%;
+        }
+      }
     }
 
     .projcard-textbox {
