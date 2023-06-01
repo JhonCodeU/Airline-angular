@@ -1,3 +1,4 @@
+// Variables de colores
 $primary-color: rgb(29, 24, 35);
 $secondary-color: rgba(83, 127, 231, 1);
 $border-color: #ddd;
@@ -5,6 +6,7 @@ $text-color: #fff;
 $subtitle-color: #c0eef2;
 
 .projcard-container {
+  // Contenedor principal
   margin: 30px 0;
   box-sizing: border-box;
   margin-left: auto;
@@ -12,10 +14,10 @@ $subtitle-color: #c0eef2;
   min-width: 79vw;
 
   .projcard {
+    // Tarjeta del proyecto
     position: relative;
     width: 100%;
-    height: 300px;
-    margin-bottom: 40px;
+    height: 380px;
     border-radius: 10px;
     background: $primary-color;
     background: linear-gradient(
@@ -36,16 +38,20 @@ $subtitle-color: #c0eef2;
     }
 
     &:nth-child(2n) .projcard-img {
+      // Posición de imagen en tarjetas pares
       left: initial;
       right: 0;
     }
+
     &:hover .projcard-img {
+      // Efecto de imagen al pasar el cursor sobre la tarjeta
       transform: scale(1.05) rotate(1deg);
     }
   }
 }
 
 .projcard-innerbox {
+  // Contenedor interno de la tarjeta
   position: absolute;
   top: 0;
   right: 0;
@@ -53,32 +59,35 @@ $subtitle-color: #c0eef2;
   left: 0;
 
   .projcard-img {
+    // Imagen del proyecto
     position: absolute;
-    height: 300px;
-    width: 400px;
+    height: 380px;
+    width: 420px;
     top: 0;
     left: 0;
     transition: transform 0.2s ease;
-    border-top-right-radius: 20% 12rem;
-    border-bottom-right-radius: 20% 12rem;
+    clip-path: circle(100% at 0 50%);
   }
 }
 
 .projcard-textbox {
+  // Contenedor de texto de la tarjeta
   position: absolute;
   color: $text-color;
   top: 7%;
   bottom: 7%;
   left: 460px;
-  padding-top: 40px;
   width: calc(100% - 470px);
+  padding-top: 60px;
 
   .projcard-title {
+    // Título del proyecto
     font-weight: 700;
     font-size: 40px;
   }
 
   .projcard-subtitle {
+    // Subtítulo del proyecto
     font-weight: 400;
     font-size: 40px;
     color: $subtitle-color;
@@ -86,6 +95,26 @@ $subtitle-color: #c0eef2;
   }
 
   .projcard-description {
+    // Descripción del proyecto
     width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // Media query para dispositivos con un ancho máximo de 768px
+
+  .projcard-container {
+    margin: 0;
+    width: 90vw;
+
+    .projcard-innerbox {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .projcard-textbox {
+      position: static;
+      margin-top: 20px;
+    }
   }
 }

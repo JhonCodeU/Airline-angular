@@ -10,41 +10,76 @@ $black: #717171;
   padding-right: 0.2em;
   padding-bottom: 0.4em;
 
-  .size_normal {
-    width: 430px;
+  .size_normal,
+  .size_large {
+    width: 100%;
     height: 258px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    // Elipse diagonal en la parte inferior
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -48px;
+      background: linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ); // Opacidad y color de fondo
+
+      width: 100%;
+      height: 214px;
+      border-radius: 50%;
+      transform: rotate(138deg);
+
+      // Curvatura y área recortada
+    }
+  }
+
+  .size_normal {
+    width: 296px;
+
+    // Ajustes específicos para size_normal
+    &::before {
+      left: -82px;
+      width: 554px;
+    }
   }
 
   .size_large {
-    width: 614px;
-    height: 258px;
+    width: 860px;
+
+    // Ajustes específicos para size_large
+    &::before {
+      left: -161px;
+      width: 1200px;
+      height: 366px;
+      bottom: -188px;
+      transform: rotate(161deg);
+      // Curvatura y área recortada
+    }
   }
 
   .card__image {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 15px;
     display: block;
     min-height: 240px;
     overflow: hidden;
     position: relative;
 
-    > img {
+    img {
       display: block;
       margin-bottom: 0;
 
-      -webkit-transition: all 0.25s ease-in-out;
-      -moz-transition: all 0.25s ease-in-out;
-      -ms-transition: all 0.25s ease-in-out;
-      -o-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out;
     }
 
+    // Efecto de escala al pasar el cursor sobre la imagen
     &:hover > img {
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
       transform: scale(1.2);
     }
   }
@@ -58,10 +93,9 @@ $black: #717171;
     margin-bottom: 0.35em;
     text-decoration: none;
 
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 
+    // Cambio de color al pasar el cursor sobre el título
     &:hover {
       color: rgba(white, 0.7);
       text-decoration: none;
@@ -85,11 +119,20 @@ $black: #717171;
   }
 
   @media screen and (max-width: 768px) {
+    // Ajustes para dispositivos con un ancho máximo de 768px
     .size_normal,
     .size_large {
       width: 90vw;
       height: 200px;
       margin-bottom: 1em;
+    }
+
+    .size_normal {
+      &::before {
+        left: -20px;
+        width: 600px;
+        transform: rotate(154deg);
+      }
     }
   }
 }
