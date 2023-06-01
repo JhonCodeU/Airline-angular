@@ -41,9 +41,14 @@
 
   // Media queries para hacerlo responsive
   @media (max-width: 768px) {
-    .banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 31% 8%;
+
+    .container .banner-content {
       width: 100%;
-      padding: 80px 20px;
+      padding: 0 20px;
 
       h1 {
         font-size: 42px;
