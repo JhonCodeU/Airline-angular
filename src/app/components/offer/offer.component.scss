@@ -1,5 +1,6 @@
 .section-offers {
   padding: 36px 0;
+
   h2 {
     padding-left: 192px;
     font-weight: 700;
@@ -11,5 +12,15 @@
     justify-content: space-between;
     padding: 0 192px;
     margin-top: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      padding-left: 20px;
+    }
+
+    .site__wrapper {
+      padding: 0 20px;
+    }
   }
 }

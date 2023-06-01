@@ -10,11 +10,6 @@ $black: #717171;
   padding-right: 0.2em;
   padding-bottom: 0.4em;
 
-  @media screen and (min-width: 40.063em) {
-    float: left;
-    width: auto;
-  }
-
   .size_normal {
     width: 430px;
     height: 258px;
@@ -87,5 +82,14 @@ $black: #717171;
     bottom: 0;
     right: 0;
     padding: 1.5em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .size_normal,
+    .size_large {
+      width: 345px;
+      height: 200px;
+      margin-bottom: 1em;
+    }
   }
 }
