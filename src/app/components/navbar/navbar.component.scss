@@ -138,4 +138,15 @@ header {
       }
     }
   }
+
+  @media screen {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav {
+        margin-left: 18px;
+        .services li {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
 }

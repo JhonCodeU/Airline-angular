@@ -125,13 +125,37 @@ $black: #717171;
       width: 90vw;
       height: 200px;
       margin-bottom: 1em;
-    }
 
-    .size_normal {
       &::before {
         left: -20px;
         width: 600px;
         transform: rotate(154deg);
+      }
+    }
+
+    .size_large {
+      img {
+        height: 300px;
+      }
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1224px) {
+    .size_normal,
+    .size_large {
+      width: 60vw;
+      height: 200px;
+      margin-bottom: 1em;
+
+      &::before {
+        left: -20px;
+        width: 775px;
+        transform: rotate(154deg);
+      }
+    }
+
+    .size_large {
+      img {
+        height: 300px;
       }
     }
   }

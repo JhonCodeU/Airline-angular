@@ -141,4 +141,41 @@
       }
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    .container {
+      .left-area {
+        width: 50%;
+        margin-bottom: 20px;
+        justify-content: start;
+        order: 1;
+      }
+
+      .right-area {
+        order: 3;
+
+        .footer__nav {
+          flex-flow: column wrap;
+
+          .nav__item {
+            margin-right: 2em;
+
+            .nav__title {
+              margin-top: 1.5em;
+            }
+          }
+        }
+
+        .follow {
+          order: 2;
+          justify-content: start;
+
+          .follow__title {
+            margin-left: 0;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
 }

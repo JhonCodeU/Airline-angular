@@ -66,4 +66,11 @@
       }
     }
   }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    background-position: 10% 8%;
+    .banner-content {
+      width: 100%;
+    }
+  }
 }
