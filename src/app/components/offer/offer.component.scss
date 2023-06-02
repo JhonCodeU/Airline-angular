@@ -1,12 +1,21 @@
+/**
+ * Estilos para la sección de ofertas.
+ */
 .section-offers {
   padding: 36px 0;
 
+  /**
+   * Estilos para el título de la sección de ofertas.
+   */
   h2 {
     font-size: 28px;
     padding-left: 192px;
     font-weight: 700;
   }
 
+  /**
+   * Estilos para el contenedor principal de la sección de ofertas.
+   */
   .site__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +24,9 @@
     margin-top: 36px;
   }
 
+  /**
+   * Media query para pantallas con ancho máximo de 768px.
+   */
   @media screen and (max-width: 768px) {
     h2 {
       padding-left: 20px;

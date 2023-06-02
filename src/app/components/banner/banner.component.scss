@@ -1,10 +1,18 @@
+// Colores globales
+$color-primary: #c20114;
+$color-secondary: #fff;
+$color-background: #000;
+$color-text: #fff;
+$color-link: #fff;
+$color-link-hover: #c20114;
+
 .banner {
   background-image: url("../../../assets/images/banner.jpg");
   width: 100%;
   height: 60vh;
 
   .banner-content {
-    color: #fff;
+    color: $color-secondary;
     width: 50%;
     padding-top: 160px;
     padding-left: 192px;
@@ -25,15 +33,15 @@
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $color-link;
       padding: 10px 30px;
       font-weight: 700;
-      background-color: #c20114;
+      background-color: $color-primary;
       border-radius: 30px;
 
       &:hover {
-        background-color: #fff;
-        color: #c20114;
+        background-color: $color-secondary;
+        color: $color-link-hover;
         transition: all 0.3s ease-in-out;
       }
     }

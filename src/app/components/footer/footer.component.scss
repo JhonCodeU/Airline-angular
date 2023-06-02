@@ -1,11 +1,24 @@
+// Colores globales
+$color-primary: #c20114;
+$color-secondary: #fff;
+$color-background: #000;
+$color-text: #fff;
+$color-link: #c20114;
+$color-link-hover: #fff;
+$color-footer-background: #e7e6f6;
+$color-footer-border: #e5e5e5;
+$color-footer-text: #2f2f2f;
+$color-bottom-background: #f1f0ff;
+$color-bottom-text: #9292a0;
+
 .footer {
   .container {
     display: flex;
     justify-content: space-between;
     padding: 60px 10%;
-    color: #2f2f2f;
-    background-color: #e7e6f6;
-    border-top: 1px solid #e5e5e5;
+    color: $color-footer-text;
+    background-color: $color-footer-background;
+    border-top: 1px solid $color-footer-border;
 
     .left-area {
       display: flex;
@@ -30,7 +43,7 @@
 
             a {
               text-decoration: none;
-              color: #181823;
+              color: $color-footer-text;
 
               &:hover {
                 text-decoration: underline;
@@ -54,8 +67,8 @@
     .follow {
       display: flex;
       flex-flow: row wrap;
-      justify-content: end;
-      align-items: end;
+      justify-content: flex-end;
+      align-items: flex-end;
 
       .follow__title {
         font-size: 18px;
@@ -68,7 +81,7 @@
 
       .icon {
         margin-right: 12px;
-        border: 2px solid #2f2f2f;
+        border: 2px solid $color-footer-text;
         font-size: xx-large;
         width: 50px;
         height: 50px;
@@ -77,8 +90,8 @@
         line-height: 50px;
 
         &:hover {
-          background-color: #2f2f2f;
-          color: #fff;
+          background-color: $color-footer-text;
+          color: $color-secondary;
         }
       }
     }
@@ -86,11 +99,10 @@
 
   .bottom {
     padding: 1em 10%;
-    background-color: #f1f0ff;
-    color: #9292a0;
+    background-color: $color-bottom-background;
+    color: $color-bottom-text;
     height: 48px;
   }
-
   // Media queries
   @media screen and (max-width: 768px) {
     .container {

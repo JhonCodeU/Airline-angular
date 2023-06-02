@@ -1,8 +1,11 @@
-// Color Variables
+// Variables de colores
 $indigo: #5c6bc0;
 $blue: #29b6f6;
 $black: #717171;
 
+/**
+ * Estilos para el contenedor de cuadrícula.
+ */
 .grid {
   float: none;
   width: 100%;
@@ -10,17 +13,25 @@ $black: #717171;
   padding-right: 0.2em;
   padding-bottom: 0.4em;
 
+  /**
+   * Estilos para las tarjetas de tamaño normal y grande.
+   */
   .size_normal,
   .size_large {
     width: 100%;
     height: 258px;
 
+    /**
+     * Estilos para la imagen dentro de las tarjetas.
+     */
     img {
       width: 100%;
       max-width: 100%;
     }
 
-    // Elipse diagonal en la parte inferior
+    /**
+     * Estilos para la elipse diagonal en la parte inferior de las tarjetas.
+     */
     &::before {
       content: "";
       position: absolute;
@@ -29,41 +40,44 @@ $black: #717171;
         to bottom right,
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
-      ); // Opacidad y color de fondo
-
+      );
       width: 100%;
       height: 214px;
       border-radius: 50%;
       transform: rotate(138deg);
-
-      // Curvatura y área recortada
     }
   }
 
+  /**
+   * Estilos específicos para las tarjetas de tamaño normal.
+   */
   .size_normal {
     width: 296px;
 
-    // Ajustes específicos para size_normal
     &::before {
       left: -82px;
       width: 554px;
     }
   }
 
+  /**
+   * Estilos específicos para las tarjetas de tamaño grande.
+   */
   .size_large {
     width: 860px;
 
-    // Ajustes específicos para size_large
     &::before {
       left: -161px;
       width: 1200px;
       height: 366px;
       bottom: -188px;
       transform: rotate(161deg);
-      // Curvatura y área recortada
     }
   }
 
+  /**
+   * Estilos para la imagen dentro de las tarjetas.
+   */
   .card__image {
     border-radius: 15px;
     display: block;
@@ -74,16 +88,20 @@ $black: #717171;
     img {
       display: block;
       margin-bottom: 0;
-
       transition: all 0.25s ease-in-out;
     }
 
-    // Efecto de escala al pasar el cursor sobre la imagen
+    /**
+     * Efecto de escala al pasar el cursor sobre la imagen.
+     */
     &:hover > img {
       transform: scale(1.2);
     }
   }
 
+  /**
+   * Estilos para el título de las tarjetas.
+   */
   .card__title {
     color: white;
     display: inline-block;
@@ -92,16 +110,20 @@ $black: #717171;
     line-height: 1.2;
     margin-bottom: 0.35em;
     text-decoration: none;
-
     transition: all 0.3s ease-out;
 
-    // Cambio de color al pasar el cursor sobre el título
+    /**
+     * Cambio de color al pasar el cursor sobre el título.
+     */
     &:hover {
       color: rgba(white, 0.7);
       text-decoration: none;
     }
   }
 
+  /**
+   * Estilos para la descripción de las tarjetas.
+   */
   .card__description {
     color: white;
     font-weight: 700;
@@ -110,6 +132,9 @@ $black: #717171;
     margin-bottom: 0.35em;
   }
 
+  /**
+   * Estilos para el contenido superpuesto en la parte inferior derecha de las tarjetas.
+   */
   .card__overlay-content {
     position: absolute;
     text-align: end;
@@ -118,8 +143,10 @@ $black: #717171;
     padding: 1.5em;
   }
 
+  /**
+   * Media query para dispositivos con un ancho máximo de 768px.
+   */
   @media screen and (max-width: 768px) {
-    // Ajustes para dispositivos con un ancho máximo de 768px
     .size_normal,
     .size_large {
       width: 90vw;
@@ -133,12 +160,19 @@ $black: #717171;
       }
     }
 
+    /**
+     * Ajustes específicos para las tarjetas de tamaño grande en dispositivos móviles.
+     */
     .size_large {
       img {
         height: 300px;
       }
     }
   }
+
+  /**
+   * Media query para dispositivos con un ancho mínimo de 769px y un ancho máximo de 1224px.
+   */
   @media screen and (min-width: 769px) and (max-width: 1224px) {
     .size_normal,
     .size_large {
@@ -153,6 +187,9 @@ $black: #717171;
       }
     }
 
+    /**
+     * Ajustes específicos para las tarjetas de tamaño grande en tabletas.
+     */
     .size_large {
       img {
         height: 300px;
